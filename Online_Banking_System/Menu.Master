@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/TopHeader.Master" AutoEventWireup="true" CodeBehind="Menu.master.cs" Inherits="Online_Banking_System.Menu" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <style>
+        .nav-item {
+            padding: 6px 40px;
+            color: antiquewhite;
+        }
+        .nav-balance{
+            padding-left:60px;
+        }
+        .nav-item-balance-val{
+            margin-right:180px;
+            color:antiquewhite;
+        }
+        .nav-item_logout{
+            padding-right:40px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div align="center" style="background-color:darksalmon; width:auto; height:35px">
+        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="nav-item" NavigateUrl="PerformTransaction.aspx" BorderColor="Gray" BorderWidth="3px">New Transactions </asp:HyperLink>
+         <asp:HyperLink ID="HyperLink2" runat="server" CssClass="nav-item" NavigateUrl="myCredits.aspx" BorderColor="Gray" BorderWidth="3px">Credits Transactions </asp:HyperLink>
+         <asp:HyperLink ID="HyperLink3" runat="server" CssClass="nav-item" NavigateUrl="myDebits.aspx" BorderColor="Gray" BorderWidth="3px">Debits Transactions </asp:HyperLink>
+         <asp:HyperLink ID="HyperLink4" runat="server" CssClass="nav-item" NavigateUrl="passwordChange.aspx" BorderColor="Gray" BorderWidth="3px">Change Password </asp:HyperLink>
+         <asp:HyperLink ID="HyperLink5" runat="server" CssClass="nav-item" NavigateUrl="PerformTransaction.aspx" BorderColor="Gray" BorderWidth="3px">New Transactions </asp:HyperLink>
+        <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="nav-item_logout" ForeColor="Red" CausesValidation="false" BackColor="White" Height="32px" OnClick="btnLogout_Click" />
+    </div>
+    <div align="center" style="color:darkred">
+        <asp:Label ID="Label1" runat="server" Text="Available Balance :" CssClass="nav-item-balance" ForeColor="Green" Font-Bold="true" BorderColor="Red" BorderWidth="3px"></asp:Label>
+        <asp:Label ID="lblBalance" runat="server" CssClass="nav-item-balance-val" ForeColor="Green" Font-Bold="true" BorderColor="Red" BorderWidth="3px"></asp:Label>
+        <asp:Label ID="lblCurrentDate" runat="server" Font-Bold="true"></asp:Label> [
+        <asp:Label ID="lblCurrenttime" runat="server" Font-Bold="true"></asp:Label> [
+    </div>
+    <asp:ContentPlaceHolder ID="ContentPH" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
